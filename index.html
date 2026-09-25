@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Singh | BCA Candidate & Software Developer</title>
+  <meta name="description" content="Personal portfolio of Aditya Singh, BCA student at Michael Madhusudan Memorial College (Kazi Nazrul University), specializing in C, C++, web technologies, and digital media." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2.5 font-bold text-lg tracking-tight group">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white font-mono text-sm font-bold shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">AS</span>
+        <span>Aditya<span class="text-blue-600 dark:text-blue-400">.Singh</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+        <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Projects</a>
+        <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Education</a>
+        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 transition" aria-label="Toggle theme">
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-slate-700"></i>
+        </button>
+
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium shadow-sm transition">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-12 pb-20 md:py-24 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Bio & Calls to Action -->
+        <div class="md:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            BCA Scholar • Michael Madhusudan Memorial College
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Aditya Singh</span>.
+            <br>
+            <span class="text-2xl sm:text-3xl lg:text-4xl text-slate-700 dark:text-slate-300 font-semibold font-mono">
+              <span id="typewriter"></span><span class="animate-pulse">|</span>
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
+            Passionate computer applications undergraduate based in Durgapur, West Bengal. Focused on core computer science foundations, algorithm problem solving in <strong>C & C++</strong>, clean responsive frontends, and creative digital media workflows.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-md shadow-blue-500/20 transition">
+              <i data-lucide="folder-code" class="w-4 h-4"></i>
+              <span>Explore Projects</span>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 font-medium transition">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Badges -->
+          <div class="flex flex-wrap items-center gap-6 pt-4 text-xs font-mono text-slate-500 dark:text-slate-400">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+              Durgapur, West Bengal
+            </span>
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+              BCA (2025–2029)
+            </span>
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="cpu" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+              C/C++ & Web
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Column: Avatar with Profile Image & Tech Orbit Badges -->
+        <div class="md:col-span-5 flex justify-center md:justify-end">
+          <div class="relative">
+            <!-- Center Avatar Frame -->
+            <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full border-[8px] border-white dark:border-slate-900 shadow-2xl overflow-hidden ring-4 ring-blue-500/20 relative group">
+              <img 
+                src="aditya_headshot.png" 
+                alt="Aditya Singh - BCA Candidate and Developer" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534972195531-a756b1126f24?auto=format&fit=crop&w=800&q=80';"
+              />
+            </div>
+
+            <!-- Orbit Floating Badge: C & C++ -->
+            <div class="absolute -top-3 -left-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg px-3 py-2 rounded-xl flex items-center gap-2 text-xs font-mono font-semibold">
+              <i data-lucide="terminal" class="w-4 h-4 text-blue-600"></i>
+              <span>C / C++</span>
+            </div>
+
+            <!-- Orbit Floating Badge: Web / Tailwind -->
+            <div class="absolute -bottom-2 -left-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg px-3 py-2 rounded-xl flex items-center gap-2 text-xs font-mono font-semibold">
+              <i data-lucide="code" class="w-4 h-4 text-cyan-500"></i>
+              <span>HTML • Tailwind</span>
+            </div>
+
+            <!-- Orbit Floating Badge: Media Production -->
+            <div class="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg px-3 py-2 rounded-xl flex items-center gap-2 text-xs font-mono font-semibold">
+              <i data-lucide="video" class="w-4 h-4 text-purple-500"></i>
+              <span>Premiere Pro</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Counter Stats Bar -->
+  <section class="border-y border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-10 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 font-mono" data-target="50">0</div>
+          <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1 font-medium">Problems & Programs</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 font-mono" data-target="4">0</div>
+          <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1 font-medium">Academic Semesters Ahead</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 font-mono" data-target="2029">0</div>
+          <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1 font-medium">Target Graduation</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 font-mono" data-target="100">0</div>
+          <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1 font-medium">% Commitment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Matrix -->
+  <section id="skills" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">Capabilities</h2>
+        <h3 class="text-3xl font-bold tracking-tight">Skills & Tech Stack</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">A breakdown of my programming languages, frameworks, and developer workflows.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Programming & Logic -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-lg mb-1">Core Programming</h4>
+          <p class="text-xs text-slate-500 mb-4">Procedural logic, structured design, and object principles.</p>
+          <div class="space-y-3 font-mono text-xs">
+            <div>
+              <div class="flex justify-between mb-1"><span>C Programming</span><span>85%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-blue-600 h-1.5 rounded-full" style="width: 85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1"><span>C++ & OOP Basics</span><span>75%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-blue-600 h-1.5 rounded-full" style="width: 75%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1"><span>Data Structures</span><span>70%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-blue-600 h-1.5 rounded-full" style="width: 70%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web UI & Front-End -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-cyan-100 dark:bg-cyan-950 flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-4">
+            <i data-lucide="layout" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-lg mb-1">Web Development</h4>
+          <p class="text-xs text-slate-500 mb-4">Clean, semantic HTML markup and responsive Tailwind CSS layout styling.</p>
+          <div class="space-y-3 font-mono text-xs">
+            <div>
+              <div class="flex justify-between mb-1"><span>HTML5 / Semantic Web</span><span>90%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-cyan-500 h-1.5 rounded-full" style="width: 90%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1"><span>CSS3 & Tailwind CSS</span><span>85%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-cyan-500 h-1.5 rounded-full" style="width: 85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1"><span>JavaScript Basics</span><span>65%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-cyan-500 h-1.5 rounded-full" style="width: 65%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Content Systems -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm sm:col-span-2 lg:col-span-1">
+          <div class="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-lg mb-1">Tools & Media</h4>
+          <p class="text-xs text-slate-500 mb-4">Development workspaces, video editing suites, and publishing tools.</p>
+          <div class="space-y-3 font-mono text-xs">
+            <div>
+              <div class="flex justify-between mb-1"><span>VS Code & Git</span><span>85%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-purple-600 h-1.5 rounded-full" style="width: 85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1"><span>Adobe Premiere Pro</span><span>80%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-purple-600 h-1.5 rounded-full" style="width: 80%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1"><span>Blogger & AdSense SEO</span><span>80%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5"><div class="bg-purple-600 h-1.5 rounded-full" style="width: 80%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section with Interactive Modals -->
+  <section id="projects" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">Portfolio Works</h2>
+          <h3 class="text-3xl font-bold tracking-tight">Featured Projects</h3>
+        </div>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2 md:mt-0">Click any card to inspect implementation details.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Project 1: C Practical Suite -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between hover:border-blue-500/50 hover:shadow-lg transition cursor-pointer" onclick="openModal('c-suite')">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-2.5 py-1 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">C / Algorithms</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-400"></i>
+            </div>
+            <h4 class="text-lg font-bold mb-2">C Academic Practical Suite</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Structured algorithm implementations for pointers, memory allocation, arrays, strings, and file operations designed for KNU BCA lab practicals.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono text-slate-500">
+            <span>VS Code • GCC</span>
+            <span class="text-blue-600 dark:text-blue-400 font-semibold">Inspect &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Developer Portfolio -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between hover:border-blue-500/50 hover:shadow-lg transition cursor-pointer" onclick="openModal('portfolio')">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-2.5 py-1 rounded bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300">Web Development</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-400"></i>
+            </div>
+            <h4 class="text-lg font-bold mb-2">Interactive Static Portfolio</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Single-file responsive personal showcase powered by Tailwind CSS, Lucide icons, theme persistence, and automated GitHub Pages CI/CD.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono text-slate-500">
+            <span>Tailwind • JS • GitHub</span>
+            <span class="text-blue-600 dark:text-blue-400 font-semibold">Inspect &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Digital Platform -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between hover:border-blue-500/50 hover:shadow-lg transition cursor-pointer" onclick="openModal('digital-platform')">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-2.5 py-1 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">Publishing & SEO</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-slate-400"></i>
+            </div>
+            <h4 class="text-lg font-bold mb-2">Digital Content & Monetization</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Search-optimized content portal customized with Google AdSense, social media funnel strategies, and structured metadata for search ranking.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono text-slate-500">
+            <span>Blogger • SEO • AdSense</span>
+            <span class="text-blue-600 dark:text-blue-400 font-semibold">Inspect &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Pathway -->
+  <section id="education" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">Timeline</h2>
+        <h3 class="text-3xl font-bold tracking-tight">Academic Pathway</h3>
+      </div>
+
+      <div class="relative border-l-2 border-blue-500/30 ml-4 md:ml-32 space-y-12">
+        <!-- BCA Degree -->
+        <div class="relative pl-6">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-slate-950 shadow"></div>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+            <h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">Bachelor of Computer Applications (BCA)</h4>
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 w-fit">2025 — 2029</span>
+          </div>
+          <p class="text-sm font-medium text-blue-600 dark:text-blue-400">Michael Madhusudan Memorial College, Durgapur</p>
+          <p class="text-xs text-slate-500 mt-1 font-mono">Affiliated to Kazi Nazrul University (KNU)</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Curriculum includes programming with C & C++, Discrete Mathematics, Digital Electronics, Data Structures, Operating Systems, and Database Management Systems.
+          </p>
+        </div>
+
+        <!-- Higher Secondary -->
+        <div class="relative pl-6">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600 border-4 border-white dark:border-slate-950 shadow"></div>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+            <h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">Senior Secondary (10+2)</h4>
+            <span class="text-xs font-mono text-slate-500">Completed</span>
+          </div>
+          <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Kendriya Vidyalaya CMERI Durgapur</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Formed analytical foundations in science, mathematics, and computational logic.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Direct Information -->
+  <section id="contact" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 sm:p-12 shadow-sm">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <h2 class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">Get In Touch</h2>
+          <h3 class="text-3xl font-bold tracking-tight">Let's Connect & Collaborate</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Open to software projects, tech discussions, and academic collaborations.</p>
+        </div>
+
+        <form id="contactForm" class="space-y-4 max-w-xl mx-auto">
+          <div>
+            <label class="block text-xs font-mono mb-1 font-semibold text-slate-700 dark:text-slate-300">YOUR NAME</label>
+            <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-mono mb-1 font-semibold text-slate-700 dark:text-slate-300">YOUR EMAIL</label>
+            <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-mono mb-1 font-semibold text-slate-700 dark:text-slate-300">MESSAGE</label>
+            <textarea rows="4" required placeholder="Hey Aditya, I'd like to talk about..." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-md shadow-blue-500/20 transition flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <p>© 2026 Aditya Singh. All rights reserved.</p>
+      <p class="font-mono">Michael Madhusudan Memorial College • Kazi Nazrul University</p>
+    </div>
+  </footer>
+
+  <!-- Modal Popups for Projects -->
+  <div id="projectModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-medium shadow-2xl translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-2">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toastMsg">Message submitted successfully!</span>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    lucide.createIcons();
+
+    // Theme Switcher
+    const themeToggleBtn = document.getElementById('themeToggle');
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // Dynamic Typewriter Headline Effect
+    const words = [
+      "BCA Undergraduate.",
+      "C & C++ Developer.",
+      "Video Editor & Creator.",
+      "Aspiring Software Engineer."
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typewriterElement = document.getElementById("typewriter");
+
+    function type() {
+      const currentWord = words[wordIndex];
+      if (isDeleting) {
+        typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 40 : 100;
+      if (!isDeleting && charIndex === currentWord.length) {
+        speed = 1800;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        speed = 400;
+      }
+      setTimeout(type, speed);
+    }
+    type();
+
+    // Animated Numeric Counters
+    const counters = document.querySelectorAll('[data-target]');
+    let counted = false;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !counted) {
+          counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const duration = 1200;
+            const step = Math.max(1, Math.floor(target / (duration / 16)));
+            let current = 0;
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                counter.textContent = target + (target === 50 || target === 100 ? '+' : '');
+                clearInterval(timer);
+              } else {
+                counter.textContent = current;
+              }
+            }, 16);
+          });
+          counted = true;
+        }
+      });
+    }, { threshold: 0.5 });
+    if (counters.length > 0) observer.observe(counters[0]);
+
+    // Modal Details Dictionary
+    const projectDetails = {
+      'c-suite': {
+        title: 'C Academic Practical Suite',
+        tag: 'C Language • Algorithms',
+        desc: 'Comprehensive suite of laboratory implementations covering pointers, recursion, dynamically allocated arrays, structs, and binary file input/output routines according to KNU BCA examination standards.',
+        tech: ['C99', 'GCC Compiler', 'VS Code', 'GDB Debugger']
+      },
+      'portfolio': {
+        title: 'Interactive Static Portfolio',
+        tag: 'Web Development',
+        desc: 'Lightweight personal website featuring responsive Tailwind CSS styling, dark/light theme toggle, custom typewriter scripts, modal popup dialogs, and continuous deployment through GitHub Pages.',
+        tech: ['HTML5', 'Tailwind CSS', 'JavaScript', 'GitHub Pages']
+      },
+      'digital-platform': {
+        title: 'Digital Content & Monetization Platform',
+        tag: 'Publishing & Analytics',
+        desc: 'Monetized content hub configured with Google AdSense, meta tag optimizations, and integrated social promotional pipelines for high user retention.',
+        tech: ['Blogger Engine', 'Google AdSense', 'SEO Optimization', 'Canva']
+      }
+    };
+
+    function openModal(key) {
+      const item = projectDetails[key];
+      if (!item) return;
+      document.getElementById('modalContent').innerHTML = `
+        <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">${item.tag}</span>
+        <h3 class="text-2xl font-bold mt-3 mb-2">${item.title}</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">${item.desc}</p>
+        <div class="mb-6">
+          <h5 class="text-xs font-mono font-bold text-slate-400 uppercase mb-2">Technologies Used</h5>
+          <div class="flex flex-wrap gap-2">
+            ${item.tech.map(t => `<span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">${t}</span>`).join('')}
+          </div>
+        </div>
+        <button onclick="closeModal()" class="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 font-medium text-sm transition">Close Window</button>
+      `;
+      document.getElementById('projectModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('projectModal').classList.add('hidden');
+    }
+
+    // Contact Form Submission Feedback
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      e.target.reset();
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
